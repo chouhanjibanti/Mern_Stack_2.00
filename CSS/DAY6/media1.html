@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 10px;
+            padding: 20px;
+        }
+
+        /*  screen only */
+        @media screen {
+            body::before{
+                content: "This is visible on screen";
+                display: block;
+                font-weight: bold;
+            }
+
+        }
+
+        @media print{
+            body{
+                background-color: white;
+                color: black;
+            }
+            body::before{
+                content: "print version[No background color]";
+                display: block;
+                font-weight: bold;
+            }
+        }
+
+        /*  min width */
+        @media (min-width: 500px){
+            body{
+                background-color: lightgreen;
+            }
+        }
+
+         /*  max width */
+        @media (max-width: 600px){
+            body{
+                background-color: orange;
+            }
+        }
+
+        /* min -width and max-width */
+        @media  (min-width: 500px) and (max-width: 600px){
+            body{
+                background-color: lightblue;
+            }
+        }
+
+        /* orientation - landscape */
+        @media (orientation: landscape){
+            body{
+                background-color: red;
+            }
+        }
+
+         @media (orientation: portrait){
+            body{
+                background-color: yellow;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Responsive Media Query</h1>
+    <p>Resize the window or change orientation to see background color and message based on media query</p>
+</body>
+</html>

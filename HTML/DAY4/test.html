@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Animated Menu with Spin and Content</title>
+  <style>
+    body {
+      display: flex;
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      height: 100vh;
+    }
+
+    .sidebar {
+      width: 300px;
+      background: #f0f4ff;
+      padding: 20px;
+      box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+    }
+
+    .sidebar ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .sidebar li {
+      padding: 10px;
+      margin: 5px 0;
+      cursor: pointer;
+      position: relative;
+      transition: 0.3s;
+    }
+
+    .sidebar li:hover {
+      background: #dde7ff;
+    }
+
+    .spinner {
+      display: inline-block;
+      width: 14px;
+      height: 14px;
+      border: 2px solid #007bff;
+      border-top: 2px solid transparent;
+      border-radius: 50%;
+      position: absolute;
+      left: -20px;
+      top: 50%;
+      transform: translateY(-50%);
+      animation: spin 0.6s linear;
+    }
+
+    @keyframes spin {
+      from { transform: translateY(-50%) rotate(0deg); }
+      to { transform: translateY(-50%) rotate(360deg); }
+    }
+
+    .content {
+      flex: 1;
+      padding: 40px;
+    }
+
+    .content h2 {
+      margin-top: 0;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="sidebar">
+    <ul>
+      <li onclick="handleClick(this, 'The Spark Content')">The Spark</li>
+      <li onclick="handleClick(this, 'Entering the Rental Jungle Content')">Entering the Rental Jungle</li>
+      <li onclick="handleClick(this, 'Chaos & Challenges Content')">Chaos & Challenges</li>
+      <li onclick="handleClick(this, 'The Shift Content')">The Shift</li>
+      <li onclick="handleClick(this, 'A Year of Learning Content')">A Year of Learning</li>
+      <li onclick="handleClick(this, 'The Big Launch Content')">The Big Launch</li>
+      <li onclick="handleClick(this, 'From Friends to Founders Content')">From Friends to Founders</li>
+    </ul>
+  </div>
+
+  <div class="content" id="content">
+    <h2>Welcome!</h2>
+    <p>Click on a heading to view its content.</p>
+  </div>
+
+  <script>
+    function handleClick(element, contentText) {
+      // Remove existing spinners
+      document.querySelectorAll('.spinner').forEach(spinner => spinner.remove());
+
+      // Add spinner
+      const spinner = document.createElement('span');
+      spinner.classList.add('spinner');
+      element.insertBefore(spinner, element.firstChild);
+
+      // Update content area
+      const contentDiv = document.getElementById('content');
+      contentDiv.innerHTML = `<h2>${element.innerText}</h2><p>${contentText}</p>`;
+    }
+  </script>
+
+</body>
+</html>
