@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .container{
+            border: 1px solid;
+            height: 200px;
+            width: 100%;
+
+            display: flex;
+            gap: 10px;
+
+            /* flex-direction: row; */
+            /* flex-direction: row-reverse; */
+            /* flex-direction: column; */
+            /* flex-direction: column-reverse; */
+
+            /* flex-wrap: wrap; */
+            /* flex-wrap: nowrap; */
+
+            /* flex-flow: row wrap; */
+
+
+            /* justify-content: start; */
+            /* justify-content: end; */
+            /* justify-content: center; */
+            /* justify-content: space-around; */
+            /* justify-content: space-between; */
+            /* justify-content: space-evenly; */
+
+            /* align-items: start; */
+            /* align-items: end; */
+            /* align-items: center;
+            justify-content: center; */
+        }
+
+        .box{
+            height: 17px;
+            width: 50px;
+            border: 1px solid;
+        }
+          /*  by default value of order is 0 */
+        /* #box1{
+            order: 1;
+        } */
+
+        /*  by default value of flex-grow is 0 */
+        /* #box3{
+            flex-grow: 1;
+        }
+          #box4{
+            flex-grow: 2;
+        } */
+
+        /*  by default value of flex-shrink is 1 */
+          /* #box5{
+            flex-shrink: 3;
+        } */
+
+        /* #box6{
+            flex-basis: 100px;
+        } */
+           #box6{
+            flex: 1 2 100px;
+        }
+    </style>
+</head>
+<body>
+    <!-- flex -direction -> row , column
+     flex-wrap -wrap , no-wrap
+     flex-flow -> direction wrap
+     justify-content -> start , end , center , space-b/w , space -around , space-evenly
+     align-item ->  start , end , center -->
+
+
+
+     <!-- order
+    flex-grow
+    flex-shrink
+    fle-basis
+    flex -->
+
+    
+
+     <!-- .container>div#box$.box*8{BOX-$} -->
+
+          <div class="container">
+            <div id="box1" class="box">BOX-1</div>
+            <div id="box2" class="box">BOX-2</div>
+            <div id="box3" class="box">BOX-3</div>
+            <div id="box4" class="box">BOX-4</div>
+            <div id="box5" class="box">BOX-5</div>
+            <div id="box6" class="box">BOX-6</div>
+            <div id="box7" class="box">BOX-7</div>
+            <div id="box8" class="box">BOX-8</div>
+          </div>
+
+</body>
+</html>

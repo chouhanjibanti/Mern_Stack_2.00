@@ -61,4 +61,28 @@ single row function :- length , mod , datadiff , floor , round
 
 Acid 
 
+===============================================
+we can write the css in three way
+inline 
+internal
+external 
 
+
+There are three type of list 
+ol -> 1 A a i I -> li
+ul -> disk circle square diamond -> li
+dl -> dt dd
+
+
+
+
+1. PIXABAY WEBSITE
+2. pizza hut
+3. Netflix
+4. Mobirise
+5. svg and logo
+6. cdnjs
+7. spotify
+8. tesselate -> https://www.tessellateco.com/
+9. jiomart
+10. Youtube
